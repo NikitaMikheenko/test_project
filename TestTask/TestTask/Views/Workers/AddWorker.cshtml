@@ -1,0 +1,95 @@
+﻿@model Common.WorkerFormModel
+
+@{
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+<div style="text-align: center">
+
+    <form method="post">
+
+        @Html.AntiForgeryToken()
+
+        @Html.ValidationSummary(true, "", new { @class = "" })
+
+        <div style="margin: 5px">
+            <label>Id: @Model.Worker.Id</label>
+            @Html.HiddenFor(model => model.Worker.Id)
+        </div>
+
+        <div style="margin: 5px">
+            <label>Surname:</label>
+            <div>
+                @Html.EditorFor(model => model.Worker.Surname)
+                <div>
+                    @Html.ValidationMessageFor(model => model.Worker.Surname, "", new { @style = "color: red" })
+                </div>
+            </div>
+        </div>
+
+        <div style="margin: 5px">
+            <label>Name:</label>
+            <div>
+                @Html.EditorFor(model => model.Worker.Name)
+                <div>
+                    @Html.ValidationMessageFor(model => model.Worker.Name, "", new { @style = "color: red" })
+                </div>
+            </div>
+        </div>
+
+        <div style="margin: 5px">
+            <label>Middle name:</label>
+            <div>
+                @Html.EditorFor(model => model.Worker.MiddleName)
+                <div>
+                    @Html.ValidationMessageFor(model => model.Worker.MiddleName, "", new { @style = "color: red" })
+                </div>
+            </div>
+        </div>
+
+        <div style="margin: 5px">
+            <lable>Date of employment (dd-/.mm-/.yyyy):</lable>
+            <div>
+                @Html.EditorFor(model => model.Worker.DateOfEmployment)
+                <div>
+                    @Html.ValidationMessageFor(model => model.Worker.DateOfEmployment, "", new { @style = "color: red" })
+                </div>
+            </div>
+        </div>
+
+        <div style="margin: 10px">
+            <label>Position:</label>
+            <select name="Worker.Position">
+                <option value="Developer">Developer</option>
+                <option value="QA Engineer">QA Engineer</option>
+                <option value="Business Analyst">Business Analyst</option>
+                <option value="Manager">Manager</option>
+            </select>
+        </div>
+
+        <div style="margin: 10px">
+            <lable>Company: </lable>
+            <select name="CompanyId">
+                @if (Model.Companies != null)
+                {
+                    foreach (var item in Model.Companies)
+                    {
+                        <option value="@item.Id">@item.Name</option>
+                    }
+                }
+            </select>
+        </div>
+
+        <input type="submit" value="Save" style="margin: 10px; margin-top: 5px" />
+
+    </form>
+
+    <form method="get">
+        <input type="submit" formaction="~/Companies/DeleteCompany/@Model.Worker.Id" value="Cancel" />
+    </form>
+
+</div>
+
+<script src="~/Scripts/jquery-3.3.1.min.js"></script>
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>

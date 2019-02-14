@@ -1,0 +1,9 @@
+D:\Qulix\TestTask\DataAccess\bin\Debug\DataAccess.dll
+D:\Qulix\TestTask\DataAccess\bin\Debug\DataAccess.pdb
+D:\Qulix\TestTask\DataAccess\bin\Debug\Common.dll
+D:\Qulix\TestTask\DataAccess\bin\Debug\Common.pdb
+D:\Qulix\TestTask\DataAccess\obj\Debug\DataAccess.csproj.CoreCompileInputs.cache
+D:\Qulix\TestTask\DataAccess\obj\Debug\DataAccess.csproj.CopyComplete
+D:\Qulix\TestTask\DataAccess\obj\Debug\DataAccess.dll
+D:\Qulix\TestTask\DataAccess\obj\Debug\DataAccess.pdb
+D:\Qulix\TestTask\DataAccess\obj\Debug\DataAccess.csprojAssemblyReference.cache

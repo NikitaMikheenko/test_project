@@ -1,0 +1,63 @@
+﻿@model List<Common.Worker>
+
+@{
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+<link href="~/Content/table.css" rel="stylesheet" />
+
+<div style="text-align: center; color: red">
+    @ViewBag.ErrorMessage
+</div>
+
+<form method="get">
+
+    <input type="submit" formaction="~/Workers/AddWorker" value="Add" style="margin: 10px" />
+
+    <table id="table">
+        <tr>
+            <th></th>
+            <th>
+                Id
+            </th>
+            <th>
+                Surname
+            </th>
+            <th>
+                Name
+            </th>
+            <th>
+                Middle name
+            </th>
+            <th>
+                Date of employment
+            </th>
+            <th>
+                Position
+            </th>
+            <th>
+                Company
+            </th>
+        </tr>
+        @if (Model != null)
+        {
+            foreach (var item in Model)
+            {
+                <tr>
+                    <td>@Html.RadioButton("id", $"{item.Id}")</td>
+                    <td>@item.Id</td>
+                    <td>@item.Surname</td>
+                    <td>@item.Name</td>
+                    <td>@item.MiddleName</td>
+                    <td>@item.DateOfEmployment</td>
+                    <td>@item.Position</td>
+                    <td>@item.Company.Name</td>
+                </tr>
+            }
+        }
+    </table>
+
+    <input type="submit" formaction="~/Workers/EditWorker" value="Edit" style="margin: 10px" />
+    <input type="submit" formaction="~/Workers/DeleteWorker" value="Delete" style="margin: 10px" />
+
+</form>

@@ -1,0 +1,11 @@
+D:\Qulix\TestTask\BusinessLogic\bin\Debug\BusinessLogic.dll
+D:\Qulix\TestTask\BusinessLogic\bin\Debug\BusinessLogic.pdb
+D:\Qulix\TestTask\BusinessLogic\bin\Debug\Common.dll
+D:\Qulix\TestTask\BusinessLogic\bin\Debug\DataAccess.dll
+D:\Qulix\TestTask\BusinessLogic\bin\Debug\Common.pdb
+D:\Qulix\TestTask\BusinessLogic\bin\Debug\DataAccess.pdb
+D:\Qulix\TestTask\BusinessLogic\obj\Debug\BusinessLogic.csprojAssemblyReference.cache
+D:\Qulix\TestTask\BusinessLogic\obj\Debug\BusinessLogic.csproj.CoreCompileInputs.cache
+D:\Qulix\TestTask\BusinessLogic\obj\Debug\BusinessLogic.csproj.CopyComplete
+D:\Qulix\TestTask\BusinessLogic\obj\Debug\BusinessLogic.dll
+D:\Qulix\TestTask\BusinessLogic\obj\Debug\BusinessLogic.pdb

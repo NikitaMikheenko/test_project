@@ -1,0 +1,62 @@
+﻿@model Common.Company
+
+@{
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+<div style="text-align: center">
+
+    <form method="post">
+
+        @Html.AntiForgeryToken()
+
+        @Html.ValidationSummary(true, "", new { @class = "" })
+
+        <div style="margin: 5px">
+            <label>Id: @Model.Id</label>
+            @Html.HiddenFor(model => model.Id)
+        </div>
+
+        <div style="margin: 5px">
+            <label>Name:</label>
+            <div>
+                @Html.EditorFor(model => model.Name)
+                <div>
+                    @Html.ValidationMessageFor(model => model.Name, "", new { @style = "color: red" })
+                </div>
+            </div>
+        </div>
+
+        <div style="margin: 5px">
+            <lable>Size:</lable>
+            <div>
+                @Html.EditorFor(model => model.Size)
+                <div>
+                    @Html.ValidationMessageFor(model => model.Size, "", new { @style = "color: red" })
+                </div>
+            </div>
+        </div>
+
+        <div style="margin: 5px">
+            <label>Organization-legal form:</label>
+            <div>
+                @Html.EditorFor(model => model.OrganizationLegalForm)
+                <div>
+                    @Html.ValidationMessageFor(model => model.OrganizationLegalForm, "", new { @style = "color: red" })
+                </div>
+            </div>
+        </div>
+
+        <input type="submit" value="Save" style="margin: 10px" />
+
+    </form>
+
+    <form method="get">
+        <input type="submit" formaction="~/Companies/GetCompaniesList" value="Cancel" />
+    </form>
+
+</div>
+
+<script src="~/Scripts/jquery-3.3.1.min.js"></script>
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>

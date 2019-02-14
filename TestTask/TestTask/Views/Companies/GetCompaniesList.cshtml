@@ -1,0 +1,51 @@
+﻿@model List<Common.Company>
+
+@{
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+<link href="~/Content/table.css" rel="stylesheet" />
+
+<div style="text-align: center; color: red">
+    @ViewBag.ErrorMessage
+</div>
+
+<form method="get">
+
+    <input type="submit" formaction="~/Companies/AddCompany" value="Add" style="margin: 10px" />
+
+    <table id="table">
+        <tr>
+            <th></th>
+            <th>
+                Id
+            </th>
+            <th>
+                Name
+            </th>
+            <th>
+                Size
+            </th>
+            <th>
+                Organization-legal form
+            </th>
+        </tr>
+        @if (Model != null)
+        {
+            foreach (var item in Model)
+            {
+                <tr>
+                    <td>@Html.RadioButton("id", $"{item.Id}")</td>
+                    <td>@item.Id</td>
+                    <td>@item.Name</td>
+                    <td>@item.Size</td>
+                    <td>@item.OrganizationLegalForm</td>
+                </tr>
+            }
+        }
+    </table>
+
+    <input type="submit" formaction="~/Companies/EditCompany" value="Edit" style="margin: 10px" />
+    <input type="submit" formaction="~/Companies/DeleteCompany" value="Delete" style="margin: 10px" />
+
+</form>

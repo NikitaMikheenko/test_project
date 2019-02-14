@@ -1,0 +1,6 @@
+D:\Qulix\TestTask\Common\bin\Debug\Common.dll
+D:\Qulix\TestTask\Common\bin\Debug\Common.pdb
+D:\Qulix\TestTask\Common\obj\Debug\Common.csproj.CoreCompileInputs.cache
+D:\Qulix\TestTask\Common\obj\Debug\Common.dll
+D:\Qulix\TestTask\Common\obj\Debug\Common.pdb
+D:\Qulix\TestTask\Common\obj\Debug\Common.csprojAssemblyReference.cache
